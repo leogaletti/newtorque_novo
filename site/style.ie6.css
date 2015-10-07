@@ -1,0 +1,251 @@
+/* begin Page */
+
+/* Created by Artisteer v3.1.0.48375 */
+
+#newt-main {
+   zoom:expression(runtimeStyle.zoom=1,calcWidth=function(o){var p='98%';var min=780;var max=1920;var b=document.body;if(o.w!=b.clientWidth){o.w=b.clientWidth;var w=b.clientWidth/100*parseInt(p);return w < min ? min+'px': w > max ? max+'px':p;}});
+   width:auto;
+}
+.cleared {
+   width:1px;
+}
+/* Start Box */
+.newt-box, .newt-box-body {
+   zoom:1;
+}
+/* End Box */
+/* Start Bar */
+.newt-bar{
+   zoom:1;
+}
+/* End Bar */
+/* end Page */
+
+/* begin Header */
+.newt-header {
+   zoom:expression(runtimeStyle.zoom=1,insertBefore(document.createElement('div'),firstChild).className='newt-header-jpeg');
+   z-index: 1;
+}
+
+.newt-header-jpeg
+{
+   position: absolute;
+   z-index:-1;
+   top: 0;
+   width:100%;
+   height: 150px;
+   background-image: url('images/header.jpg');
+   background-repeat: no-repeat;
+   background-position: center center;
+}
+div.newt-header-wrapper{
+   width:expression(calcWidth(this));
+}  
+/* end Header */
+
+/* begin HeaderObject */
+div.newt-headerobject{
+   font-size: 1px;
+}
+/* end HeaderObject */
+
+/* begin Menu */
+ul.newt-hmenu, ul.newt-hmenu ul, ul.newt-hmenu li, ul.newt-hmenu a {
+   zoom:1;
+}
+.newt-hmenu li.newt-hmenuhover{
+   z-index: 10000;
+}
+.newt-hmenu .newt-hmenuhoverUL{
+   visibility: visible;
+   top: 100%;
+   left: 0;
+}
+.newt-hmenu .newt-hmenuhoverUL .newt-hmenuhoverUL{
+   top: 0;
+   left: 100%;
+}
+.newt-hmenu ul li {
+   float: left !important;
+   clear: both;
+   width: 100%;
+}
+.newt-nav
+{
+   zoom: 1;
+   height: 37px;
+   background:#BB1B20;
+}
+.newt-nav-wrapper{
+   width:expression(calcWidth(this));
+} 
+
+/* end Menu */
+
+/* begin MenuItem */
+.newt-hmenu a 
+{
+   display:inline-block;
+   color: #CBE7EB;
+   padding: 0 17px;
+   line-height: 25px;
+   text-align: center;
+}
+
+.newt-hmenu a.active 
+{
+   color: #D3EAEE;
+   background-color:#317581;
+}
+
+.newt-hmenu a:hover, .newt-hmenuhoverA,  .newt-hmenuhover a 
+{
+   color: #000000;
+   background-color:#317581;
+}
+
+/* end MenuItem */
+
+/* begin MenuSeparator */
+ul.newt-hmenu li {
+   margin-left:expression(this.previousSibling==null?'0':'4px');
+}
+ul.newt-hmenu li li{
+   margin-left:0;
+}
+
+/* end MenuSeparator */
+
+/* begin MenuSubItem */
+.newt-hmenu ul a 
+{
+   color: #CFE8ED !important;
+   float: left;
+}
+
+.newt-hmenu ul a:hover, .newt-hmenu ul .newt-hmenuhover .newt-hmenuhoverA 
+{
+   color: #000000 !important;
+   background-position: left bottom;
+   border-color: #595959;
+   border-top-width: 1px !important;
+}
+
+/* end MenuSubItem */
+
+/* begin Box, Sheet */
+.newt-sheet {
+   background:#FFFFFF;
+   width:expression(calcWidth(this));
+}
+
+/* end Box, Sheet */
+
+/* begin Layout */
+.newt-content-layout, .newt-content-layout-row, .newt-layout-cell 
+{
+   display: block;
+   zoom: 1;
+}
+.newt-layout-cell
+{
+   position:relative;
+   float: left;
+   clear: right;
+}
+/* end Layout */
+
+/* begin Box, Block */
+.newt-block {
+   background:#FFFFFF;
+}
+/* end Box, Block */
+
+/* begin Box, BlockContent */
+.newt-blockcontent {
+   background:#FFFFFF;
+}
+.newt-blockcontent-body ul li{
+   height: 1%;
+}
+
+/* end Box, BlockContent */
+
+/* begin Button */
+.newt-button-wrapper{
+   zoom: 1;
+}
+.newt-button-wrapper .newt-button-l, .newt-button-wrapper .newt-button-r {
+   display: none;
+}
+.newt-button-wrapper .newt-button {
+   float: left;
+}
+/* end Button */
+
+/* begin Box, Post */
+.newt-post {
+   background:#FFFFFF;
+}
+/* end Box, Post */
+
+/* begin PostIcons, PostHeaderIcons */
+.newt-postheadericons span{
+   zoom: 1;
+}
+/* end PostIcons, PostHeaderIcons */
+
+/* begin PostBullets */
+.newt-post ul li, .newt-post ol ul li
+{
+   height: 1%;
+   padding-left: 11px;
+   /* makes "ul li" not to align behind the image if they are in the same line */
+  overflow-x: visible;
+   overflow-y: hidden;
+}
+
+.newt-post ul ol li
+{
+   background: none;
+   padding-left: 0;
+   /* overrides overflow for "ul li" and sets the default value */
+  overflow: visible;
+}
+/* end PostBullets */
+
+/* begin PostIcons, PostFooterIcons */
+.newt-postfootericons span{
+   zoom: 1;
+}
+/* end PostIcons, PostFooterIcons */
+
+/* begin Footer */
+.newt-footer-body{
+   padding-right: 0;
+   zoom:1;
+}
+.newt-footer{
+   zoom:1;
+   background:#013D5B;
+}
+
+.newt-footer-text
+{
+   height: 15px;
+}
+
+.newt-rss-tag-icon
+{
+   zoom: 1;
+   font-size: 1px;
+}
+
+/* end Footer */
+
+/* begin LayoutCell, content */
+.newt-content {
+   width: auto;
+}
+/* end LayoutCell, content */
+
