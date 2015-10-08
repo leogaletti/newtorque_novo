@@ -1,4 +1,4 @@
-<?
+﻿<?
     include "conectar.php";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"[]>
@@ -49,7 +49,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">New Torque - Encelência em torque</a>
+                    <a class="navbar-brand" href="index.html">New Torque - Excelência em torque</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="menu-collapsed">
@@ -88,22 +88,32 @@
         <header id="bannerTopo" class="carousel slide">
             <!-- Indicators -->
             <ol class="carousel-indicators">
-                <li data-target="#bannerTopo" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <?php
+                    $id_query_cli = mysql_query("Select * from destaques where bl_publicar = '1' order by cd_ordem");
+                    $i = 0;
+                    while($arr = mysql_fetch_assoc($id_query_cli)){
+                        if ($i == 0) {
+                            echo '<li data-target="#bannerTopo" data-slide-to="0" class="active"></li>';
+                        } else {
+                            echo '<li data-target="#bannerTopo" data-slide-to="'. $i . '"></li>';
+                        }
+                        $i++;
+                    }
+                ?>
             </ol>
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <?php
                     $id_query_cli = mysql_query("Select * from destaques where bl_publicar = '1' order by cd_ordem");
+                    $j = 0;
                     while($arr = mysql_fetch_assoc($id_query_cli)){
                 ?>
-                        <div class="item active">
-                            <a href="<?php echo($arr[ds_link]); ?>">
-                                <div class="fill" style="<?php echo 'background-image:url(fotos_destaque/foto_' . ($arr[cd_destaque]) . '.JPG);'; ?>"></div>
+                        <div class="item <?php if ($j == 0) { $j = 1; echo 'active';  } ?> ">
+                            <a href="<?php if (isset($arr['ds_link'])) { echo $arr['ds_link']; } else { echo '#'; } ?>"> 
+                                <div class="fill" style="<?php echo "background-image:url('fotos_destaque/foto_" . ($arr['cd_destaque']) . ".JPG');"; ?>"></div>
                                 <div class="carousel-caption">
-                                    <h2><?php echo($arr[ds_legenda]); ?></h2>
+                                    <h2><?php echo($arr['ds_legenda']); ?></h2>
                                 </div>
                             </a>
                         </div>
@@ -133,11 +143,21 @@
                 <div class="col-md-3">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h4><i class="fa fa-fw fa-check"></i> Bootstrap v3.2.0</h4>
+                            <h4><i class="fa fa-fw fa-check"></i> Em Destaque</h4>
                         </div>
+
+                        <?
+                            $sql = "SELECT * FROM noticias where bl_publicar='1' and bl_destaque='1'";
+                            $id_query = mysql_query($sql);
+                            $arr = mysql_fetch_assoc($id_query);
+                            $titulo=substr($arr['tit_noticia'], 0, 100)."...";
+                            $codigo=$arr['cd_noticia'];
+                        ?>
+
                         <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                            <a href="#" class="btn btn-default">Learn More</a>
+                            <img class="img-responsive img-rounded img-quadros" alt="A Empresa" src="imagens/inicial01.jpg" />
+                            <p><?php echo $titulo; ?></p>
+                            <a href="noticia_completa.php?cd=<?php echo($codigo); ?>" class="btn btn-default">Leia Mais</a>
                         </div>
                     </div>
                 </div>
@@ -187,5 +207,11 @@
                 Email: contato@newtorque.com.br<br /></h4>
             </div>
         </footer>
+        <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
     </body>
 </html>
