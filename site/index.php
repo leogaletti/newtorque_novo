@@ -169,7 +169,7 @@
                         <div class="panel-body">
                             <img class="img-responsive img-rounded img-quadros" alt="A Empresa" src="./imagens/inicial02.jpg" />
                             <p>Conheça nossos principais diferenciais!</p>
-                            <a href="a-empresa.php" class="btn btn-default">Leia Mais</a>
+                            <a href="a-empresa.php" class="btn btn-default">Veja Aqui</a>
                         </div>
                     </div>
                 </div>
@@ -181,7 +181,7 @@
                         <div class="panel-body">
                             <img class="img-responsive img-rounded img-quadros" alt="Contato" src="./imagens/inicial03.jpg" />
                             <p>Deixe seus dados que entraremos em contato</p>
-                            <a href="fale-conosco.php" class="btn btn-default">Leia Mais</a>
+                            <a href="fale-conosco.php" class="btn btn-default">Clique Aqui</a>
                         </div>
                     </div>
                 </div>
@@ -193,7 +193,7 @@
                         <div class="panel-body">
                             <img class="img-responsive img-rounded img-quadros" alt="Trabalhe Conosco" src="./imagens/inicial04.jpg" />
                             <p>Venha trabalhar conosco! Envie seu curriculo.</p>
-                            <a href="trabalhe-conosco.php" class="btn btn-default">Leia Mais</a>
+                            <a href="trabalhe-conosco.php" class="btn btn-default">Clique Aqui</a>
                         </div>
                     </div>
                 </div>
