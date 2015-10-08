@@ -1,1 +1,18 @@
-Commit inicial do Git
+Commit inicial do Git Teste
+Add linha
+
+"AutoFileName",
+		"BracketHighlighter",
+		"Emmet",
+		"File Navigator",
+		"Git",
+		"GitGutter",
+		"GotoDocumentation",
+		"Insert Filepath",
+		"LoremIpsum",
+		"LoremText",
+		"Package Control",
+		"Phpcs",
+		"PhpDoc",
+		"SublimeLinter",
+		"Theme - Flatland"
