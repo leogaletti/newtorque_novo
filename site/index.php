@@ -1,15 +1,15 @@
 <?
-    //include "conectar.php";
+    include "conectar.php";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"[]>
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="pt-BR" xml:lang="pt-BR">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-        <title> New Torque - Excelência em Torque </title>
+        <title> New Torque - ExcelÃªncia em Torque </title>
         <meta name="author" content="www.msideias.com.br">
         <meta name="classification" content="industries">
         <META NAME="Keywords" Content="new torque servicos prestacao equipamentos torquimetro valvulas medidores venda">
-        <META NAME="Description"  Content="New Torque - Excelência em Torque">
+        <META NAME="Description"  Content="New Torque - ExcelÃªncia em Torque">
         <META NAME="organization name"  Content="New Torque">
         <meta name="audience" content="ALL">
         <meta name="expires" content="NEVER">
@@ -25,8 +25,6 @@
         <meta name="doc-class" content="Completed">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-        <link rel="stylesheet" href="css/style.css" />
-
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -36,6 +34,8 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <meta charset="utf-8">
+
+		  <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>  
         <!-- Navigation -->
@@ -49,7 +49,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">New Torque - Encelência em torque</a>
+                    <a class="navbar-brand" href="index.html">New Torque - EncelÃªncia em torque</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="menu-collapsed">
@@ -61,7 +61,7 @@
                             <a href="aempresa.php">A Empresa</a>
                         </li>
                         <li>
-                            <a href="servicos.php">Serviços</a>
+                            <a href="servicos.php">ServiÃ§os</a>
                         </li>
                         <li>
                             <a href="linha-equipamentos.php">Linha Equipamentos</a>
@@ -70,10 +70,10 @@
                             <a href="clientes.php">Clientes</a>
                         </li>
                         <li>
-                            <a href="videos.php">Vídeos</a>
+                            <a href="videos.php">VÃ­deos</a>
                         </li>
                         <li>
-                            <a href="localizacao.php">Localização</a>
+                            <a href="localizacao.php">LocalizaÃ§Ã£o</a>
                         </li>
                         <li>
                             <a href="fale-conosco.php">Fale Conosco</a>
@@ -95,19 +95,19 @@
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
-                <?
+                <?php
                     $id_query_cli = mysql_query("Select * from destaques where bl_publicar = '1' order by cd_ordem");
                     while($arr = mysql_fetch_assoc($id_query_cli)){
                 ?>
                         <div class="item active">
-                            <a href="<? echo($arr[ds_link]); ?>">
-                                <div class="fill" style="<? echo 'background-image:url(fotos_destaque/foto_' . ($arr[cd_destaque]) . '.JPG);'; ?>"></div>
+                            <a href="<?php echo($arr[ds_link]); ?>">
+                                <div class="fill" style="<?php echo 'background-image:url(fotos_destaque/foto_' . ($arr[cd_destaque]) . '.JPG);'; ?>"></div>
                                 <div class="carousel-caption">
-                                    <h2><? echo($arr[ds_legenda]); ?></h2>
+                                    <h2><?php echo($arr[ds_legenda]); ?></h2>
                                 </div>
                             </a>
                         </div>
-                <?
+                <?php
                     }
                 ?>
             </div>
@@ -127,7 +127,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">
-                        Bem-vindo a New Torque - Excelência em torque!
+                        Bem-vindo a New Torque - ExcelÃªncia em torque!
                     </h1>
                 </div>
                 <div class="col-md-3">
@@ -148,7 +148,7 @@
                         </div>
                         <div class="panel-body">
                             <img class="img-responsive img-rounded img-quadros" alt="A Empresa" src="./imagens/inicial02.jpg" />
-                            <p>Conheça nossos principais diferenciais!</p>
+                            <p>ConheÃ§a nossos principais diferenciais!</p>
                             <a href="a-empresa.php" class="btn btn-default">Leia Mais</a>
                         </div>
                     </div>
@@ -182,8 +182,8 @@
         </div>
         <footer class="footer">
             <div class="container">
-                <h4 class="text-muted text-center">Rua Cento e Trinta e Um nº 276<br/>
-                Bairro Santa Maria - Timóteo Cep: 35180-142<br />
+                <h4 class="text-muted text-center">Rua Cento e Trinta e Um nÂº 276<br/>
+                Bairro Santa Maria - TimÃ³teo Cep: 35180-142<br />
                 Email: contato@newtorque.com.br<br /></h4>
             </div>
         </footer>
