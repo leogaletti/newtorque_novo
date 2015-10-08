@@ -25,6 +25,8 @@
         <meta name="doc-class" content="Completed">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
+        <link rel="stylesheet" href="css/style.css" />
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -52,7 +54,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="menu-collapsed">
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
+                        <li class="active">
                             <a href="index.php">Principal</a>
                         </li>
                         <li>
@@ -142,38 +144,48 @@
                 <div class="col-md-3">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h4><i class="fa fa-fw fa-gift"></i> Free &amp; Open Source</h4>
+                            <h4><i class="fa fa-fw fa-gift"></i> Vantagens da New Torque</h4>
                         </div>
                         <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                            <a href="#" class="btn btn-default">Learn More</a>
+                            <img class="img-responsive img-rounded img-quadros" alt="A Empresa" src="./imagens/inicial02.jpg" />
+                            <p>Conheça nossos principais diferenciais!</p>
+                            <a href="a-empresa.php" class="btn btn-default">Leia Mais</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h4><i class="fa fa-fw fa-compass"></i> Easy to Use</h4>
+                            <h4><i class="fa fa-fw fa-compass"></i> Agende uma visita</h4>
                         </div>
                         <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                            <a href="#" class="btn btn-default">Learn More</a>
+                            <img class="img-responsive img-rounded img-quadros" alt="Contato" src="./imagens/inicial03.jpg" />
+                            <p>Deixe seus dados que entraremos em contato</p>
+                            <a href="fale-conosco.php" class="btn btn-default">Leia Mais</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h4><i class="fa fa-fw fa-compass"></i> Easy to Use</h4>
+                            <h4><i class="fa fa-fw fa-compass"></i> Trabalhe Conosco</h4>
                         </div>
                         <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                            <a href="#" class="btn btn-default">Learn More</a>
+                            <img class="img-responsive img-rounded img-quadros" alt="Trabalhe Conosco" src="./imagens/inicial04.jpg" />
+                            <p>Venha trabalhar conosco! Envie seu curriculo.</p>
+                            <a href="trabalhe-conosco.php" class="btn btn-default">Leia Mais</a>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- /.row -->
         </div>
+        <footer class="footer">
+            <div class="container">
+                <h4 class="text-muted text-center">Rua Cento e Trinta e Um nº 276<br/>
+                Bairro Santa Maria - Timóteo Cep: 35180-142<br />
+                Email: contato@newtorque.com.br<br /></h4>
+            </div>
+        </footer>
     </body>
 </html>
