@@ -1,9 +1,16 @@
+html,
 body {
-	margin-bottom: 30px;
+    height: 100%;
+}
+
+main {
+  min-height: 100%;
+  position: relative;
+
 }
 
 .footer {
-	position: relative;
+	position: absolute;
   	bottom: 0;
   	width: 100%;
   	/* Set the fixed height of the footer here */
@@ -38,11 +45,6 @@ img {
  */
 
 /* Global Styles */
-
-html,
-body {
-    height: 100%;
-}
 
 body {
     padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
