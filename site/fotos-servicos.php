@@ -85,108 +85,61 @@
                 </div>
                 <!-- /.container -->
             </nav>
-<div class="cleared reset-box"></div>
-<div class="newt-box newt-sheet">
-        <div class="newt-box-body newt-sheet-body">
-            <div class="newt-layout-wrapper">
-                <div class="newt-content-layout">
-                    <div class="newt-content-layout-row">
-                        <div class="newt-layout-cell newt-content">
-<div class="newt-box newt-post">
-    <div class="newt-box-body newt-post-body">
-<div class="newt-post-inner newt-article">
-                                <div class="newt-postcontent">
-<div class="newt-content-layout-wrapper layout-item-0">
-<div class="newt-content-layout layout-item-1">
-    <div class="newt-content-layout-row">
-    <div class="newt-layout-cell layout-item-2" style="width: 75%; background-attachment: scroll;	 background-image: url(imagens/fundo_conteudo.gif); background-repeat: no-repeat;  background-position: top; height:600px;" >
-    <div>
-<p>
-	<span style="color: rgb(201, 29, 32); font-size: 24px; font-weight: bold; line-height: 24px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px;">Servi&ccedil;os</span>
-</p>
-    </div>
-    <div>
-<p>
-		<span style="color: rgb(201, 29, 32); font-size: 24px; font-weight: bold; line-height: 24px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px;"></span>        
-<?
-		$id_query_serv = mysql_query("Select * from servicos where cd_servico = '{$_GET['cd']}' and bl_publicars ='1'");
-		$arr_serv = mysql_fetch_assoc($id_query_serv);
-?>
-        <h4><? echo($arr_serv['tit_servico'])?></h4>
-</p>
-    	<div class="newt-layout-cell layout-item-2" style="width: 50%;">
-        <table class="newt-article" border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
-            <tbody>
-                <tr>
-                    <td class="" style="padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px;">Descri&ccedil;&atilde;o completa</td>
-                </tr>
-        
-                <tr>
-                    <td class="" style="padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px;"><h3><? echo($arr_serv['ds_servico']) ?></h3></td>
-                </tr>
-            </tbody>
-        </table>
-    	</div>
-		<div class="newt-layout-cell layout-item-2" style="width: 50%; min-height:200px;">
-        <table border="0" align="center" cellpadding="0" cellspacing="0" class="newt-article" style="width: 100%;">
-            <tbody>
-                <tr>
-                    <td class="" style="text-align: center; padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px;">Fotos</td>
-                </tr>
-        
-                <tr>
-                    <td class="" style="text-align: center; padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px;">
-<?
-				$id_query = mysql_query("Select * from fotos_servicos where cd_servico = '{$_GET['cd']}' and bl_publicarfs ='1' ORDER BY cd_ordemfs");
-				if (mysql_num_rows($id_query)){ 
-					$conta_fotos = 1;
-					while($arr = mysql_fetch_assoc($id_query)){
-						if($conta_fotos > 2){
-							$conta_fotos = 1;
-				            echo("<br>");
-						}
-?>
-                        <a href="fotos_servicos/foto_<? echo($arr['cd_foto_servico']) ?>.JPG" rel="lightbox[roadtrip]" title="<? echo($arr['ds_legenda']) ?>"><img src="fotos_servicos/mini_foto_<? echo($arr['cd_foto_servico']) ?>.JPG" title="<? echo($arr['ds_legenda']) ?>" border="1" class="thumb"></a>
-<?
-						$conta_fotos += 1;
-					}
-				}
-?>
-</td>
-                </tr>
-            </tbody>
-        </table>
-   	 	</div>
-<p><h3>
-	<a href="javascript:history.go(-1)"><img src="imagens/botao_voltar.jpg" width="31" height="31"  style="border:none" /><? echo(" Voltar para a página anterior") ?></a>
-</h3></p>
-    	</div>
-    	</div>
-    	<div class="newt-layout-cell layout-item-2" style="width: 200px;">
-        <p style="text-align: center;"><img width="180" height="578" alt="" style="border:none" src="./images/banner_direita_interno.jpg" /></p>
-    	</div>
-    </div>
-</div>
-</div>
+            <div class="container">
+                <div class="col-md-8 col-md-offset-2">
+                    <?
+                		$id_query_serv = mysql_query("Select * from servicos where cd_servico = '{$_GET['cd']}' and bl_publicars ='1'");
+                		$arr_serv = mysql_fetch_assoc($id_query_serv);
+                    ?>
+                    <h3 class="text-center"><? echo($arr_serv['tit_servico'])?></h3>
+        	
+                        <h4>Descri&ccedil;&atilde;o completa</h4>
+            
+                        <p><? echo($arr_serv['ds_servico']) ?></p>
+                                <div id="carousel-id" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                    <?
+    				    $id_query = mysql_query("Select * from fotos_servicos where cd_servico = '{$_GET['cd']}' and bl_publicarfs ='1' ORDER BY cd_ordemfs");
+    				    if (mysql_num_rows($id_query)){
+                            for ($i = 0; $i < mysql_num_rows($id_query); $i++) {
+                    ?> 
+                                        <li data-target="#carousel-id" data-slide-to="<?= $i ?>" class=""></li>    
+                    <?php
+                            }
+                            $numeroFoto = 1;
+                    ?>
+                                    </ol>
+                                    <div class="carousel-inner">
+                    <?php
+                            while($arr = mysql_fetch_assoc($id_query)) : 
+                    ?>
+                                        <div class="item <?php if ($numeroFoto == 1) { echo 'active'; } ?>">
+                                            <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide" src="fotos_servicos/foto_<? echo($arr['cd_foto_servico']) ?>.JPG">
+                                            <div class="carousel-caption">
+                                                <h1><?php echo($arr['ds_legenda']) ?></h1>
+                                            </div>
+                                        </div>      
+                    <?php
+                                $numeroFoto++;
+                            endwhile;
+                        }
+                    ?>                                  
+                                    </div>
+                                <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                                <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                            </div>
 
-                </div>
-                <div class="cleared"></div>
-                </div>
+                    
 
-		<div class="cleared"></div>
-    </div>
-</div>
-
-                          <div class="cleared"></div>
-                        </div>
-                    </div>
+<br>
+<br>
+    	<button class="btn btn-primary"> 
+            <span class="glyphicon glyphicon-arrow-left" aria-hidden="true">
+                <a style="text-decoration:none; color: #fff;" href="javascript:history.go(-1)"> Voltar para página anterior</a>
+            </span>
+        </button>
                 </div>
             </div>
-            <div class="cleared"></div>
-            
-    		<div class="cleared"></div>
-        </div>
-    </div>
             <footer class="footer">
                 <div class="container">
                     <h4 class="text-muted text-center">Rua Cento e Trinta e Um nº 276<br/>
@@ -194,7 +147,12 @@
                     Email: contato@newtorque.com.br<br /></h4>
                 </div>
             </footer>
-</div>
         </main>
+
+        <script type="text/javascript">
+            $('.carousel').carousel({
+                interval: 5000
+            });
+        </script>
     </body>
 </html>

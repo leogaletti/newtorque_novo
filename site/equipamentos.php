@@ -1,139 +1,90 @@
 <?
-	include "conectar.php";
+    include "conectar.php";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"[]>
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="pt-BR" xml:lang="pt-BR">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title> New Torque - Excelência em Torque </title>
-<meta name="author" content="www.msideias.com.br">
-<meta name="classification" content="industries">
-<META NAME="Keywords" Content="new torque servicos prestacao equipamentos torquimetro valvulas medidores venda">
-<META NAME="Description"  Content="New Torque - Excelência em Torque">
-<META NAME="organization name"  Content="New Torque">
-<meta name="audience" content="ALL">
-<meta name="expires" content="NEVER">
-<meta name="page-type" content="Commercial">
-<meta name="robots" content="INDEX,FOLLOW">
-<meta name="Language" content="Portuguese">
-<meta name="language" content="pt-br">
-<meta name="Revisit" content="2">
-<meta name="revisit-after" content="2 days">
-<meta name="distribution" content="Global">
-<meta name="rating" content="industria">
-<meta name="resource-type" content="document">
-<meta name="doc-class" content="Completed">
-<link href="style.css" rel="stylesheet" type="text/css">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="script.js"></script>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title> New Torque - Excelência em Torque </title>
+        <meta name="author" content="www.msideias.com.br">
+        <meta name="classification" content="industries">
+        <META NAME="Keywords" Content="new torque servicos prestacao equipamentos torquimetro valvulas medidores venda">
+        <META NAME="Description"  Content="New Torque - Excelência em Torque">
+        <META NAME="organization name"  Content="New Torque">
+        <meta name="audience" content="ALL">
+        <meta name="expires" content="NEVER">
+        <meta name="page-type" content="Commercial">
+        <meta name="robots" content="INDEX,FOLLOW">
+        <meta name="Language" content="Portuguese">
+        <meta name="language" content="pt-br">
+        <meta name="Revisit" content="2">
+        <meta name="revisit-after" content="2 days">
+        <meta name="distribution" content="Global">
+        <meta name="rating" content="industria">
+        <meta name="resource-type" content="document">
+        <meta name="doc-class" content="Completed">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-<script language="javascript" type="text/javascript">
-function subMenu(show) {
-if (show){
-document.getElementById('sub_menu').style.display = 'block';
-} else {
-document.getElementById('sub_menu').style.display = 'none';
-}
-}
-</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <meta charset="utf-8">
 
-<style type="text/css">
-.newt-post .layout-item-0 { margin-bottom: 10px; }
-.newt-post .layout-item-1 { border-spacing: 10px 0px; border-collapse: separate; }
-.newt-post .layout-item-2 { border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-top-color:#3F97A6;border-right-color:#3F97A6;border-bottom-color:#3F97A6;border-left-color:#3F97A6; padding-right: 5px;padding-left: 5px; }
-.ie7 .newt-post .newt-layout-cell {border:none !important; padding:0 !important; }
-.ie6 .newt-post .newt-layout-cell {border:none !important; padding:0 !important; }
-</style>
-
-</head>
-<body>
-<div id="newt-main">
-    <div class="cleared reset-box"></div>
-    <div class="newt-header">
-        <div class="newt-header-position">
-            <div class="newt-header-wrapper">
-                <div class="cleared reset-box"></div>
-                <div class="newt-header-inner">
-                <div class="newt-headerobject"></div>
-                <script type="text/javascript" src="swfobject.js"></script>
-                <script type="text/javascript">
-                jQuery((function (swf) {
-                    return function () {
-                        swf.switchOffAutoHideShow();
-                        swf.registerObject("newt-flash-object", "9.0.0", "expressInstall.swf");
-                    }
-                })(swfobject));
-                </script>
-                <div id="newt-flash-area">
-                <div id="newt-flash-container">
-                <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1881" height="470" id="newt-flash-object">
-                    <param name="movie" value="images/flash.swf" />
-                    <param name="quality" value="high" />
-                	<param name="scale" value="default" />
-                	<param name="wmode" value="transparent" />
-                	<param name="flashvars" value="color1=0xFFFFFF&amp;alpha1=.45&amp;framerate1=12&amp;loop=true&amp;wmode=transparent" />
-                    <param name="swfliveconnect" value="true" />
-                    <!--[if !IE]>-->
-                    <object type="application/x-shockwave-flash" data="images/flash.swf" width="1881" height="470">
-                        <param name="quality" value="high" />
-                	    <param name="scale" value="default" />
-                	    <param name="wmode" value="transparent" />
-                	    <param name="flashvars" value="color1=0xFFFFFF&amp;alpha1=.45&amp;framerate1=12&amp;loop=true&amp;wmode=transparent" />
-                        <param name="swfliveconnect" value="true" />
-                    <!--<![endif]-->
-                      	<div class="newt-flash-alt"><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></div>
-                    <!--[if !IE]>-->
-                    </object>
-                    <!--<![endif]-->
-                </object>
+          <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>  
+        <main>
+            <!-- Navigation -->
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-collapsed">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">New Torque - Excelência em torque</a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="menu-collapsed">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active">
+                                <a href="index.php">Principal</a>
+                            </li>
+                            <li>
+                                <a href="a-empresa.php">A Empresa</a>
+                            </li>
+                            <li>
+                                <a href="servicos.php">Serviços</a>
+                            </li>
+                            <li>
+                                <a href="linha-equipamentos.php">Linha Equipamentos</a>
+                            </li>
+                            <li>
+                                <a href="clientes.php">Clientes</a>
+                            </li>
+                            <li>
+                                <a href="videos.php">Vídeos</a>
+                            </li>
+                            <li>
+                                <a href="localizacao.php">Localização</a>
+                            </li>
+                            <li>
+                                <a href="fale-conosco.php">Fale Conosco</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
                 </div>
-                </div>
-                <div class="newt-logo">
-                                                </div>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-    <div class="cleared reset-box"></div>
-<div class="newt-bar newt-nav">
-<div class="newt-nav-outer">
-<div class="newt-nav-wrapper">
-<div class="newt-nav-inner">
-	<div class="newt-nav-center">
-	<ul class="newt-hmenu">
-		<li>
-			<a href="./index.php">Principal</a>
-		</li>	
-		<li>
-			<a href="./a-empresa.php">A Empresa</a>
-		</li>	
-		<li>
-			<a href="./servicos.php">Servi&ccedil;os</a>
-		</li>	
-		<li>
-			<a href="./linha-equipamentos.php" class="active">Equipamentos</a>
-		</li>	
-		<li>
-			<a href="./clientes.php">Clientes</a>
-		</li>	
-		<li>
-			<a href="./videos.php">V&iacute;deos</a>
-		</li>	
-		<li>
-			<a href="./localizacao.php">Localiza&ccedil;&atilde;o</a>
-		</li>	
-		<li>
-			<a href="./fale-conosco.php">Fale Conosco</a>
-		</li>	
-	</ul>
-	</div>
-</div>
-</div>
-</div>
-</div>
+                <!-- /.container -->
+            </nav>
 <div class="cleared reset-box"></div>
 <div class="newt-box newt-sheet">
         <div class="newt-box-body newt-sheet-body">
@@ -155,18 +106,18 @@ document.getElementById('sub_menu').style.display = 'none';
 <p>
 <ul>
 <?
-	$id_query_linha = mysql_query("Select * from linhas where cd_linha = '{$_GET[cd]}' and bl_publicar ='1' order by cd_ordem");
+	$id_query_linha = mysql_query("Select * from linhas where cd_linha = '{$_GET['cd']}' and bl_publicar ='1' order by cd_ordem");
 	$arr_linha = mysql_fetch_assoc($id_query_linha);
 ?>
-<h4><a href="" onmouseover="javascript:subMenu(true);" onmouseout="javascript:subMenu(false);"><? echo($arr_linha[tit_linha]) ?></a></h4>
+<h4><a href="" onmouseover="javascript:subMenu(true);" onmouseout="javascript:subMenu(false);"><? echo($arr_linha['tit_linha']) ?></a></h4>
 <div style="display:none" id="sub_menu" onmouseover="javascript:subMenu(true);" onmouseout="javascript:subMenu(false);">
 <?
-				$id_query = mysql_query("Select * from equipamentos where cd_linha = '{$_GET[cd]}' and bl_publicare ='1' ORDER BY cd_equipamento ASC");
+				$id_query = mysql_query("Select * from equipamentos where cd_linha = '{$_GET['cd']}' and bl_publicare ='1' ORDER BY cd_equipamento ASC");
 				if (mysql_num_rows($id_query)){ 
 					while($arr = mysql_fetch_assoc($id_query)){
 ?>
                         <li>
-                        <a href="detalhes-equipamento.php?cd=<? echo($arr[cd_linha]) ?>&cd_equip=<? echo($arr[cd_equipamento]) ?>"><? echo($arr[ds_equipamento]) ?></a>
+                        <a href="detalhes-equipamento.php?cd=<? echo($arr['cd_linha']) ?>&cd_equip=<? echo($arr['cd_equipamento']) ?>"><? echo($arr['ds_equipamento]) ?></a>
 					    </li>
 						<br />
 <?
